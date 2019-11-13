@@ -41,7 +41,7 @@ body{
     top: 0;
     left: 0;
     padding: 20px 10px 10px 80px;
-    background: #d3545d;;
+    background: #d3545d;
     font-size: 30px;
     color: white;
     text-shadow: -3px 2px 3px rgba(0, 0, 0, 0.72);
@@ -131,4 +131,8 @@ input, button{
 .top button.reset:active {
     top: 4px;
     box-shadow: 0px 0px #d3545d;
+}
+
+.errorStyle{
+    background-color: #333333!important;
 }

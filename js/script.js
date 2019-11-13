@@ -3,6 +3,23 @@ var calculator = document.getElementById("calculator");
 var operators = document.getElementsByClassName("operator");
 
 
+
+function validation() {
+    var x = screen.value;
+    var regexNumbers = /[0-9]+$/;
+    var regexSigns = new RegExp(/[\.\+\-\/\*]+$/g);
+
+    if(x.match(regexSigns) || x.match(regexNumbers)) {
+        console.log("aaa")
+    }
+    else {
+        error();
+        x = x.substring(0, x.length - 1);
+        console.log("error")
+        screen.value=x;
+    }
+
+}
 function input(i) {
     screen.value = screen.value + i;
 
@@ -31,8 +48,6 @@ function input(i) {
 
 
 }
-
-
 function result() {
     if (eval(screen.value) !=undefined){
         screen.value = eval(screen.value);
@@ -54,5 +69,13 @@ function reset() {
 
 
 
+}
+
+function error() {
+    screen.style.backgroundColor="#9e4249"
+
+    setTimeout(function () {
+        screen.style.backgroundColor="#d3545d";
+    }, 300);
 }
 
