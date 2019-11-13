@@ -24,7 +24,7 @@ function input(i) {
     screen.value = screen.value + i;
 
 
-    //Animate js
+    //Animate j
     calculator.style.width = "325px";
     setTimeout(function () {
         for (var y = 0; y < operators.length; y++) {
