@@ -3,28 +3,27 @@ var calculator = document.getElementById("calculator");
 var operators = document.getElementsByClassName("operator");
 
 
+screen.onkeyup = keyUp;
+var q = " ";
 
-function validation() {
-    var x = screen.value;
-    var regexNumbers = /[0-9]+$/;
+function keyUp(e) {
+    var x = e.key;
+    var regexNumbers = /^[0-9]+$/;
     var regexSigns = new RegExp(/[\.\+\-\/\*]+$/g);
 
-    if(x.match(regexSigns) || x.match(regexNumbers)) {
-        console.log("aaa")
-    }
-    else {
-        error();
-        x = x.substring(0, x.length - 1);
-        console.log("error")
-        screen.value=x;
-    }
+    if (x.match(regexSigns) || x.match(regexNumbers)) {
+         q=screen.value;
 
+    } else {
+        screen.value = q;
+        error();
+    }
 }
 function input(i) {
     screen.value = screen.value + i;
 
 
-    //Animate j
+    //Animate js
     calculator.style.width = "325px";
     setTimeout(function () {
         for (var y = 0; y < operators.length; y++) {
@@ -41,21 +40,22 @@ function input(i) {
             operators[y].style.pointerEvents = "auto";
 
 
-
         }
 
     }, 800);
 
 
 }
+
 function result() {
-    if (eval(screen.value) !=undefined){
+    if (eval(screen.value) != undefined) {
         screen.value = eval(screen.value);
 
-    }else{
-        screen.value ='';
+    } else {
+        screen.value = '';
     }
 }
+
 function reset() {
 
     screen.value = "";
@@ -68,14 +68,14 @@ function reset() {
     }
 
 
-
 }
 
 function error() {
-    screen.style.backgroundColor="#9e4249"
 
+
+    screen.style.backgroundColor = "#9e4249"
     setTimeout(function () {
-        screen.style.backgroundColor="#d3545d";
+        screen.style.backgroundColor = "#d3545d";
     }, 300);
 }
 
