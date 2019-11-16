@@ -18,10 +18,11 @@
     background: #00000096;
 }
 
-body{
+body {
     background-size: 100%;
-    background-image: url("../image/image.png");
+    background-image: url("../image/image.jpg");
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +33,7 @@ body{
     user-select: none;
 }
 
-#history{
+#history {
     align-items: flex-start;
     flex-direction: column;
     display: flex;
@@ -43,11 +44,12 @@ body{
     padding: 10px;
     max-height: 386px;
 }
-#history p{
-    transition: all 0.3s;
+
+#history p {
+    transition: all 1s;
     margin-bottom: 10px;
     padding: 6px 20px 6px 10px;
-    /* height: 30px; */
+    opacity: 0;
     display: table-caption;
     max-width: 100%;
     border-radius: 12px;
@@ -57,6 +59,9 @@ body{
     /* min-width: 21%; */
     box-shadow: -1px 2px 4px 0px #0000009c;
 }
+.myStyle{
+    opacity: 1!important;
+}
 
 
 #calculator {
@@ -64,10 +69,10 @@ body{
 
     transition: width 0.7s;
     width: 405px;
-    margin:100px 0% 100px 35%;;
+    margin: 100px 0% 100px 35%;;
     padding: 20px 20px 9px;
     position: relative;
-    background:#6f6f6f94;
+    background: #6f6f6f94;
     border-radius: 11px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
@@ -101,10 +106,11 @@ body{
 }
 
 
-input, button{
+input, button {
     border: none;
     outline: none;
 }
+
 .keys button, .top button.reset {
     float: left;
     position: relative;
@@ -125,14 +131,14 @@ input, button{
 
 
 .keys button.operator {
-    transition: opacity 0.7s;!important;
-    background:#d3545d;
+    transition: opacity 0.7s;
+!important;
+    background: #d3545d;
 }
 
 
-
 .keys button.eval {
-    width: 140px!important;
+    width: 140px !important;
     background: #d3545d;
     color: #ffffff;
 }
@@ -178,10 +184,10 @@ input, button{
     box-shadow: 0px 0px #d3545d;
 }
 
-.errorStyle{
-    background-color: #333333!important;
+.errorStyle {
+    background-color: #333333 !important;
 }
 
-.zero{
-    width: 138px!important;
+.zero {
+    width: 138px !important;
 }
